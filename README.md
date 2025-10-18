@@ -1,4 +1,4 @@
-# 🛡️ Automated 3-2-1 Data Backup & Recovery System
+## 🛡️ Automated 3-2-1 Data Backup & Recovery System
 
 This project engineers a **robust, self-auditing data backup solution** for Linux environments.  
 It automates **compression**, **asymmetric encryption (GPG Key Pair)**, and **scheduled transfer** to ensure data survivability following the **3-2-1 backup rule**.
@@ -7,16 +7,16 @@ It demonstrates mastery of **system automation**, **security protocols**, and **
 
 ---
 
-## 📁 Project Setup
+**📁 Project Setup**
 
 To ensure all absolute paths in the scripts work correctly, create a dedicated project folder inside your user’s home directory (`~`).
 
-### 🧱 Create the Main Project Directory
+**🧱 Create the Main Project Directory**
 ```bash
 mkdir -p ~/Desktop/Automated_Backup_System
 cd ~/Desktop/Automated_Backup_System
 ```
-#### 📂 File Placement
+**📂 File Placement**
 Place backup_core.sh and recovery_utility.py directly inside the Automated_Backup_System folder.
 
 Create the following folders:
@@ -25,7 +25,8 @@ Create the following folders:
 
 2. network_target_test/ — simulates your network backup location
 
-##### ✨ Key Features & Security Protocols
+**✨ Key Features & Security Protocols**
+
 | **Focus Area** | **Feature Implemented** | **Security / Reliability** |
 |----------------|--------------------------|-----------------------------|
 | **3-2-1 Compliance** | Triple Copy Transfer | Local Drive (Copy 1), Network Target (Copy 2 via `rsync`), and Offsite Cloud (Copy 3 via `rclone`) |
@@ -34,7 +35,8 @@ Create the following folders:
 | **Robustness** | Automated Auditing | Logs every action and sends email alerts upon success/failure |
 | **User Experience** | Interactive Recovery | Lists available backups and restores chosen version |
 
-###### 🛠️ Prerequisites
+**🛠️ Prerequisites**
+
 Before running the system, ensure the following utilities are installed on Kali/Ubuntu/Debian:
 
 1. GPG (GnuPG) — for encryption (usually pre-installed)
@@ -121,6 +123,7 @@ Prompts for your Private Key Passphrase
 Verifies integrity before restoring
 
 **🧠 System Summary**
+
 | **Function** | **Script / Folder** | **Location** | **Description** |
 |---------------|----------------------|----------------|------------------|
 | **Backup Engine** | `backup_core.sh` | Root project folder | Automates compression, encryption, and transfer |
@@ -130,6 +133,7 @@ Verifies integrity before restoring
 | **Logs** | `/tmp/backup_log_*.txt` | System temp directory | Stores detailed process records for auditing |
 
 **🧩 Tech Stack**
+
 Bash (Shell Scripting) — core automation engine
 
 Python — recovery utility and integrity verification
